@@ -1,0 +1,432 @@
+
+<div style="width:100%">
+    <br>
+    <div style="width:100%;height:500px" *ngIf = "Info.DRIP_FR_L=='true'">
+      <br>
+    <div style="width:75%;float:left" >
+        <h4>DRIP_FR_L</h4>
+        <canvas id="DRIPFRL" width="800px" height="500px"></canvas>
+    </div>
+    <div style="width:25%;float:left;overflow:auto;height:450px;margin-top: 45px;">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Point Number</th>
+            <th scope="col">Time\Average</th>
+            <th scope="col">Drip Front Left</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">N/A</th>
+            <th scope="row">Average</th>
+            <td>{{ave1}}</td>
+
+          </tr>
+          <tr *ngFor="let date of CL;let key=index">
+            <th scope="row">{{numid[key]}}</th>
+            <td>{{date}}</td>
+            <td>{{drip_frl[0].data[key]}}</td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+    <br>
+  </div>
+  <!-- drip_fr_r -->
+  <div style="width:100%;height:500px" *ngIf = "Info.DRIP_FR_R=='true'">
+    <br>
+    <div style="width:75%;float:left" >
+        <h4>DRIP_FR_R</h4>
+        <canvas id="DRIPFRR" width="800px" height="500px"></canvas>
+    </div>
+    <div style="width:25%;float:left;overflow:auto;height:450px;margin-top: 45px;">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Point Number</th>
+            <th scope="col">Time\Average</th>
+            <th scope="col">Drip Front Right</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">N/A</th>
+            <th scope="row">Average</th>
+            <td>{{ave2}}</td>
+
+          </tr>
+          <tr *ngFor="let date of CL;let key=index">
+            <th scope="row">{{numid[key]}}</th>
+            <td>{{date}}</td>
+            <td>{{drip_frr[0].data[key]}}</td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+    <br>
+  </div>
+
+ <!-- drip_re_l -->
+ <div style="width:100%;height:500px" *ngIf = "Info.DRIP_RE_L=='true'">
+  <br>
+  <div style="width:75%;float:left" >
+      <h4>DRIP_RE_L</h4>
+      <canvas id="DRIPREL" width="800px" height="500px"></canvas>
+  </div>
+  <div style="width:25%;float:left;overflow:auto;height:450px;margin-top: 45px;">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Point Number</th>
+          <th scope="col">Time\Average</th>
+          <th scope="col">Drip Rear Left</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">N/A</th>
+          <th scope="row">Average</th>
+          <td>{{ave3}}</td>
+
+        </tr>
+        <tr *ngFor="let date of CL;let key=index">
+          
+          <th scope="row">{{numid[key]}}</th>
+          <td>{{date}}</td>
+          <td>{{drip_rel[0].data[key]}}</td>
+
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+  <br>
+</div>
+
+<!-- drip_re_r -->
+<div style="width:100%;height:500px" *ngIf = "Info.DRIP_RE_R=='true'">
+  <br>
+  <div style="width:75%;float:left" >
+      <h4>DRIP_RE_R</h4>
+      <canvas id="DRIPRER" width="800px" height="500px"></canvas>
+  </div>
+  <div style="width:25%;float:left;overflow:auto;height:450px;margin-top: 45px;">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Point Number</th>
+          <th scope="col">Time\Average</th>
+          <th scope="col">Drip Rear Right</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">N/A</th>
+          <th scope="row">Average</th>
+          <td>{{ave4}}</td>
+
+        </tr>
+        <tr *ngFor="let date of CL;let key=index">
+          <th scope="row">{{numid[key]}}</th>
+            <td>{{date}}</td>
+          <td>{{drip_rer[0].data[key]}}</td>
+
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+  <br>
+</div>
+
+
+        <!-- drip_sym_fr -->
+  <div style="width:100%;height:500px"*ngIf = "Info.DRIP_SYMMATRY_FR=='true'">
+    <br>
+    <div style="width:75%;float:left" >
+        <h4>DRIP_SYMMATRY_FR</h4>
+        <canvas id="DRIP_SYMMATRY_FR" width="720px" height="500px"></canvas>
+    </div>
+    <div style="width:25%;float:left;overflow:auto;height:450px;margin-top: 45px;">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Point Number</th>
+            <th scope="col">Time\Average</th>
+            <th scope="col">Drip Symmetry Front</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">N/A</th>
+            <th scope="row">Average</th>
+            <td>{{ave5}}</td>
+
+          </tr>
+          <tr *ngFor="let date of CL;let key=index">
+            <th scope="row">{{numid[key]}}</th>
+            <td>{{date}}</td>
+            <td>{{dripsymmetry_fr[0].data[key].x}}</td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+    <br>
+  </div>
+
+
+      <!-- drip_sym_re -->
+      <div style="width:100%;height:500px"*ngIf = "Info.DRIP_SYMMATRY_RE=='true'">
+        <br>
+        <div style="width:75%;float:left" >
+            <h4>DRIP_SYMMATRY_RE</h4>
+            <canvas id="DRIP_SYMMATRY_RE" width="720px" height="500px"></canvas>
+        </div>
+        <div style="width:25%;float:left;overflow:auto;height:450px;margin-top: 45px;">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Point Number</th>
+                <th scope="col">Time\Average</th>
+                <th scope="col">Drip Symmetry Rear</th>
+    
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">N/A</th>
+                <th scope="row">Average</th>
+                <td>{{ave6}}</td>
+    
+              </tr>
+              <tr *ngFor="let date of CL;let key=index">
+                <th scope="row">{{numid[key]}}</th>
+                <td>{{date}}</td>
+                <td>{{dripsymmetry_re[0].data[key].x}}</td>
+    
+              </tr>
+    
+            </tbody>
+          </table>
+    
+        </div>
+        <br>
+      </div>
+
+          <!-- b_pitch_fr -->
+  <div style="width:100%;height:500px"*ngIf = "Info.B_PITCH_FR=='true'">
+    <br>
+    <div style="width:75%;float:left" >
+        <h4>B_PITCH_FR</h4>
+        <canvas id="B_PITCH_FR" width="720px" height="500px"></canvas>
+    </div>
+    <div style="width:25%;float:left;overflow:auto;height:450px;margin-top: 45px;">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Point Number</th>
+            <th scope="col">Time\Average</th>
+            <th scope="col">B-Pitch Front</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">N/A</th>
+            <th scope="row">Average</th>
+            <td>{{ave7}}</td>
+
+          </tr>
+          <tr *ngFor="let date of CL;let key=index">
+            <th scope="row">{{numid[key]}}</th>
+            <td>{{date}}</td>
+            <td>{{bpitch_fr[0].data[key].x}}</td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+    <br>
+  </div>
+
+   <!-- b_pitch_re -->
+   <div style="width:100%;height:500px"*ngIf = "Info.B_PITCH_RE=='true'">
+    <br>
+    <div style="width:75%;float:left" >
+        <h4>B_PITCH_RE</h4>
+        <canvas id="B_PITCH_RE" width="720px" height="500px"></canvas>
+    </div>
+    <div style="width:25%;float:left;overflow:auto;height:450px;margin-top: 45px;">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Point Number</th>
+            <th scope="col">Time\Average</th>
+            <th scope="col">B-Pitch Rear</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">N/A</th>
+            <th scope="row">Average</th>
+            <td>{{ave8}}</td>
+
+          </tr>
+          <tr *ngFor="let date of CL;let key=index">
+            <th scope="row">{{numid[key]}}</th>
+            <td>{{date}}</td>
+            <td>{{bpitch_re[0].data[key].x}}</td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+    <br>
+  </div>
+
+  <!-- roofpicklocation_fr -->
+  <div style="width:100%;height:500px" *ngIf = "Info.ROOF_PICK_LOCATION_FR=='true'">
+    <br>
+    <div style="width:75%;float:left" >
+        <h4>ROOF_PICK_LOCATION_FR</h4>
+        <canvas id="ROOF_PICK_LOCATION_FR" width="720px" height="500px"></canvas>
+    </div>
+    <div style="width:25%;float:left;overflow:auto;height:450px;margin-top: 45px;">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Point Number</th>
+            <th scope="col">Time\Average</th>
+            <th scope="col">Roof Pick Location Front</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">N/A</th>
+            <th scope="row">Average</th>
+            <td>{{ave9}}</td>
+
+          </tr>
+          <tr *ngFor="let date of CL;let key=index">
+            <th scope="row">{{numid[key]}}</th>
+            <td>{{date}}</td>
+            <td>{{roofpicklocation_fr[0].data[key].x}}</td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+    <br>
+  </div>
+
+  <!-- roofpicklocation_re -->
+  <div style="width:100%;height:500px" *ngIf = "Info.ROOF_PICK_LOCATION_RE=='true'">
+    <br>
+    <div style="width:75%;float:left" >
+        <h4>ROOF_PICK_LOCATION_RE</h4>
+        <canvas id="ROOF_PICK_LOCATION_RE" width="720px" height="500px"></canvas>
+    </div>
+    <div style="width:25%;float:left;overflow:auto;height:450px;margin-top: 45px;">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Point Number</th>
+            <th scope="col">Time\Average</th>
+            <th scope="col">Roof Pick Location Rear</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">N/A</th>
+            <th scope="row">Average</th>
+            <td>{{ave0}}</td>
+
+          </tr>
+          <tr *ngFor="let date of CL;let key=index">
+            <th scope="row">{{numid[key]}}</th>
+            <td>{{date}}</td>
+            <td>{{roofpicklocation_re[0].data[key].x}}</td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+    <br>
+  </div>
+</div>
+
+              <br>
+              <div style="display: block; margin-top: 100px;" *ngIf= "Info.Table=='true'">
+                <br>
+                
+                <span><h4>Table</h4>Save as
+                <select name="fileformat" id="fileformat" [(ngModel)]="chosenformat">
+                  <option [value]="key" *ngFor = "let key of format">{{key}}</option>
+                </select>
+                <button (click)="download()" class="exportbutton">Export</button>
+                </span>
+                <table class="table" id="excel-table">
+                  <thead class="thead-light">
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col">DRIP FR_L</th>
+                      <th scope="col">DRIP FR_R</th>
+                      <th scope="col">DRIP RE_L</th>
+                      <th scope="col">DRIP RE_R</th>
+                      <th scope="col">DRIP_SYMMETRY_FR</th>
+                      <th scope="col">DRIP_SYMMETRY_RE</th>
+                      <th scope="col">B-Pitch_FR</th>
+                      <th scope="col">B-Pitch_RE</th>
+                      <th scope="col">ROOF PICK LOCATION FR</th>
+                      <th scope="col">ROOF PICK LOCATION RE</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let date of CL;let key=index">
+                      <th scope="row">{{date}}</th>
+                      <td>{{drip_frl[0].data[key]}}</td>
+                      <td>{{drip_frr[0].data[key]}}</td>
+                      <td>{{drip_rel[0].data[key]}}</td>
+                      <td>{{drip_rer[0].data[key]}}</td>
+                      <td>{{dripsymmetry_fr[0].data[key].x}}</td>
+                      <td>{{dripsymmetry_re[0].data[key].x}}</td>
+                      <td>{{bpitch_fr[0].data[key].x}}</td>
+                      <td>{{bpitch_re[0].data[key].x}}</td>
+                      <td>{{roofpicklocation_fr[0].data[key].x}}</td>
+                      <td>{{roofpicklocation_re[0].data[key].x}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                
+
+              </div>
+    
+
